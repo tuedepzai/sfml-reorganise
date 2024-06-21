@@ -9,6 +9,7 @@ public:
 	int WIDTH;
 	int HEIGHT;
 	std::string NAME;
+	sf::Event event;
 
 
 	Engine(const int WIDTH, const int HEIGHT, std::string name);

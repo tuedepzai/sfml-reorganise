@@ -11,7 +11,7 @@ Engine::Engine(const int WIDTH, const int HEIGHT, std::string name) {
 	this->HEIGHT = HEIGHT;
 	this->NAME = name;
 
-	std::cout << "Window init successfully!" << '\n';
+	std::cout << "Window init successfully!" << std::endl;
 }
 void Engine::CreateWindow(){	
 	sf::RenderWindow window(sf::VideoMode(this->WIDTH, this->HEIGHT), this->NAME);
@@ -20,8 +20,14 @@ void Engine::CreateWindow(){
 
 
 void Engine::MainLoop() {
-	while (this->GameWindow->isOpen()) {
 
+	while (*this->GameWindow.isOpen()) {
+		
+		while (*this->GameWindow.pollEvent(event)) {
+			if (event.type == sf::Event::Closed) {
+				this->GameWindow->close();
+			}
+		}
 	}
 }
 

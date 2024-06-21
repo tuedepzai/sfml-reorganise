@@ -24,4 +24,5 @@ int main() {
 	Engine engine(WIDTH, HEIGHT, name);
 
 	engine.CreateWindow();
+	engine.MainLoop();
 }
