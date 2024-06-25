@@ -6,7 +6,7 @@
 find_package(SFML COMPONENTS system window graphics CONFIG REQUIRED)
 find_package(ImGui-SFML CONFIG REQUIRED)
 
-
+ 
 
 
 add_executable (sfml "sfml.cpp" "sfml.h"  "Engine/Engine.cpp" "Engine/Engine.h")
@@ -17,9 +17,6 @@ endif()
 
 # TODO: Add tests and install targets if needed.
 include_directories(./Engine)
-
-
-
 
 
 

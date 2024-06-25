@@ -6,17 +6,20 @@
 class Engine {
 public:
 	sf::RenderWindow* GameWindow;
+	std::mutex WindowMutex;
 	int WIDTH;
 	int HEIGHT;
 	std::string NAME;
-	sf::Event event;
+
 
 
 	Engine(const int WIDTH, const int HEIGHT, std::string name);
 
 	void CreateWindow();
 
-	void MainLoop();
+	void DrawGrid(int OFFSET);
+
+	void MainLoopFunction();
 
 	~Engine();
 
